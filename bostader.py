@@ -52,7 +52,8 @@ def filter_bostader(data):
                 b["AntalRum"] >= MIN_RUM and
                 b["Yta"] >= MIN_YTA and
                 b["Hyra"] <= MAX_HYRA and
-                b["Stadsdel"] in OMRADEN
+                b["Stadsdel"] in OMRADEN and
+                (b["Vanlig"] or b["Korttid"])
             ):
                 results.append(b)
         except Exception:
