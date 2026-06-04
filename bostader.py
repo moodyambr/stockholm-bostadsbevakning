@@ -44,6 +44,7 @@ def save_seen(seen):
 
 def filter_bostader(data):
     results = []
+    print(f"Totalt antal annonser från API: {len(data)}")
 
     for b in data:
 
@@ -59,6 +60,7 @@ def filter_bostader(data):
         except Exception:
             continue
 
+    print(f"Matchade efter filter: {len(results)}")
     return results
 
 
